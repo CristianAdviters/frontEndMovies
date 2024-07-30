@@ -1,0 +1,11 @@
+nav {
+  border: 1px black solid;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
