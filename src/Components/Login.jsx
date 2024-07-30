@@ -13,7 +13,6 @@ const Login = () => {
           placeholder="Enter your username"
           required
         />
-
         <label htmlFor="">Password</label>
         <input
           type="password"
@@ -21,12 +20,12 @@ const Login = () => {
           placeholder="Enter your username"
           required
         />
-
         <div className="div-form" required>
           <input type="checkbox" required />
           I'm not a bot
           <input type="submit" value="Log in" />
         </div>
+        Are you new at x? <a href="">Sing up now!</a>
       </form>
     </>
   );

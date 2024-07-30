@@ -17,3 +17,8 @@
   outline: none;
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+  color: snow;
+}

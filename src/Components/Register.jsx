@@ -39,7 +39,7 @@ const Register = () => {
           I'm not from CIA
           <input type="submit" value="Sign up" required />
         </div>
-        Already have an account?<a href=""></a>
+        Already have an account?<a href="">Log in!</a>
       </form>
     </>
   );
