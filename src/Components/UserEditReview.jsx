@@ -3,6 +3,8 @@ import "./userEditReview.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const UserEditReview = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <label>Make your review</label>
@@ -23,12 +25,9 @@ const UserEditReview = () => {
           }}
         />
       </form>
-      <input
-        type="submit"
-        className="review-button"
-        value="Home"
-        onClick={{}}
-      />
+
+      {/* HOME BUTTON */}
+      <button onClick={() => navigate("/home")}>Home </button>
     </>
   );
 };
