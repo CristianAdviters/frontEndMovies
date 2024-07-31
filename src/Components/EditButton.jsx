@@ -3,7 +3,7 @@ import React from "react";
 const EditButton = () => {
   return (
     <>
-      <button onClick={EditReview}>Edit Review</button>
+      <button>Edit Review</button>
     </>
   );
 };

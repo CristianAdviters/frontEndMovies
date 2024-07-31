@@ -1,7 +1,9 @@
 import React from "react";
 import "./register.css";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <>
       <form action="" id="register-form">
@@ -39,7 +41,8 @@ const Register = () => {
           I'm not from CIA
           <input type="submit" value="Sign up" required />
         </div>
-        Already have an account?<a href="">Log in!</a>
+        Already have an account?
+        <a onClick={() => navigate("/login")}>Log in!</a>
       </form>
     </>
   );
