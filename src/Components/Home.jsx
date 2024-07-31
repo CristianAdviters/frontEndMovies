@@ -7,12 +7,10 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <>
-      <Nav />
       <h1 style={{ textAlign: "center" }}>Welcome to Adviters Movies!</h1>
       <button>Search Movies</button>
       <Movies />
       <StaticMovies />
-      <Footer />
     </>
   );
 };

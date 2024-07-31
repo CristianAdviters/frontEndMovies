@@ -1,7 +1,9 @@
 import React from "react";
 
 const EditButton = () => {
-  function EditReview() {}
+  function EditReview() {
+    const data = Array.map();
+  }
   return (
     <>
       <button onClick={EditReview}>Edit Review</button>

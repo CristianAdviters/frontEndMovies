@@ -6,11 +6,18 @@ import Movies from "./Components/Movies";
 import StaticMovies from "./Components/StaticMovies";
 import Footer from "./Components/Footer";
 import EditButton from "./Components/EditButton";
+import UserEditReview from "./Components/UserEditReview";
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./Components/Layout";
 
 function App() {
   return (
     <>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/home" element={<Home />} />
+        </Route>
+      </Routes>
     </>
   );
 }
