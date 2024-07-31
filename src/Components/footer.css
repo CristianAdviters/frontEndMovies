@@ -1,0 +1,12 @@
+footer {
+  /* border: 1px black solid; */
+  margin-top: 15px;
+  font-family: cursive;
+  background-color: blue;
+  color: whitesmoke;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

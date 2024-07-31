@@ -5,9 +5,15 @@ const Nav = () => {
   return (
     <>
       <nav>
-        <a href="">Home</a>
-        <a href="">Log in</a>
-        <a href="">User</a>
+        <a href="" className="a-nav">
+          Home
+        </a>
+        <a href="" className="a-nav">
+          Log in
+        </a>
+        <a href="" className="a-nav">
+          User
+        </a>
       </nav>
     </>
   );
