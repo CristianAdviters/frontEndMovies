@@ -10,3 +10,7 @@ nav {
   text-decoration: none;
   color: brown;
 }
+
+a {
+  cursor: pointer;
+}

@@ -1,9 +1,10 @@
 import React from "react";
+import EditButton from "./EditButton";
 
 const UserProfile = () => {
   return (
     <>
-      <div>User Profile</div>
+      <EditButton />
     </>
   );
 };
