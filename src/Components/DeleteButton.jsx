@@ -1,5 +1,9 @@
 import React from "react";
 
+const confirmDelete = () =>{
+  alert('yeah')
+}
+
 const DeleteButton = () => {
   return (
     <>

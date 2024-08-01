@@ -11,6 +11,7 @@ import UserEditReview from "./Components/UserEditReview";
 import UserDeleteReview from "./Components/UserDeleteReview";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Components/Layout";
+import { SearchMovie } from "./pages/SearchMovie/SearchMovie";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<Home />} />
+          <Route path="/search-movie" element={<SearchMovie />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />}></Route>
           <Route path="/user-profile" element={<UserProfile />} />
