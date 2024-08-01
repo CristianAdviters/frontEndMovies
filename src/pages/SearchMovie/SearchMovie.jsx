@@ -3,6 +3,7 @@ import { SearchBar } from './SearchBar/SearchBar';
 import MovieList from './MovieList/MovieList';
 import { useFetch } from '../../hooks/useFetch';
 
+
 export const SearchMovie = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredMovies, setFilteredMovies] = useState([]);
@@ -27,7 +28,7 @@ export const SearchMovie = () => {
     if(error) return <div>Error: {error}</div>
   
     return (
-      <div>
+      <div style={{margin:'auto', textAlign:'center', marginTop:'15px'}}>
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <MovieList movies={filteredMovies} />
       </div>

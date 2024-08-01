@@ -10,6 +10,7 @@ const Home = () => {
     <>
       <h1 style={{ textAlign: "center" }}>Welcome to Adviters Movies!</h1>
       <Link to={`/search-movie`}>
+        
         <button>Search Movies</button>
       </Link>
       <Movies />
