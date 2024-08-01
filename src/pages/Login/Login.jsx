@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import { useAuth } from '../../utils/AuthProvider'
 import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../utils/AuthProvider'
 
 export const Login = () => {
   const [email, setEmail] = useState('')
@@ -25,7 +25,7 @@ export const Login = () => {
 
         //localStorage.setItem("accessToken", JSON.stringify(access))
         //localStorage.setItem("refreshToken", JSON.stringify(refresh))
-        localStorage.setItem("AuthToken", JSON.stringify(JSON.stringify(data)))
+        localStorage.setItem("AuthToken", JSON.stringify(data))
 
         login(data.token)
         navigate("/search-movie")

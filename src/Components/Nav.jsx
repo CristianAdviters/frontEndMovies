@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <>
       <nav>
-        <a onClick={() => navigate("/home")} className="a-nav">
+        <a onClick={() => navigate("/")} className="a-nav">
           Home
         </a>
         <a onClick={() => navigate("/login")} className="a-nav">

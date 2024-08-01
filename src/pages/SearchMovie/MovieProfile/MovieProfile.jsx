@@ -1,9 +1,12 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { useFetch } from "../../../hooks/useFetch";
 import UserEditReview from "../../../Components/UserEditReview";
 
 const MovieProfile = () => {
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('AuthToken')))
+  const [isActive, setButton] = useState(false)
+  console.log({items});
   const { id } = useParams();
 
   const {
@@ -15,6 +18,20 @@ const MovieProfile = () => {
   const genreNames = movie.moviesGenre
     ? movie.moviesGenre.map((mg) => mg.genre.name)
     : [];
+
+  const handleHide = () =>{
+    setButton(true)
+  }  
+
+  //see if the token exists   
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem('items'))
+    console.log(items)
+    if(items){
+      setItems(items)
+    }
+  }, [])  
+
 
   if (load) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -38,11 +55,12 @@ const MovieProfile = () => {
         <p>Description: {item.description}</p>
         <p>Calification: {item.rate}</p>
         
-        {/*<Link to={''}>
-        <button>View Comments</button>
-        </Link>*/}
         
-        <p>Comments of this Review:{(item.comments_user) ? (
+        <button onClick={handleHide}>View Comments</button>
+
+        
+        <div>Comments of this Review:
+          {( item.comments_user) ? (
            item.comments_user).map((value, index) =>
              <div key={index}>
                <div>Comment from User: {value.user.username}</div>
@@ -51,14 +69,19 @@ const MovieProfile = () => {
              <div>There are no comments for the moment...
               <button>Would you like to add a new comment?</button>
              </div>
-              
-        }</p>
+          }</div>
       
        </div>
        )
       )}
       <div>Look at you..profile movie page...</div>
-      <UserEditReview />
+      
+      {/*valid only when the user is logged, otherwise, redirect to login */}
+      
+      <Link to={(items === null) ? '/login' : '/user-edit-review'}>
+       <button>Add a Review!</button> 
+      </Link>
+      
     </div>
   );
 };
