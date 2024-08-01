@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useFetch } from '../../hooks/useFetch'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEditUser } from '../../hooks/useEditUser';
+import './adminProfile.css'
 
 export const AdminProfile = () => {
     const [isEditing, setIsEditing] = useState('');
@@ -56,11 +57,11 @@ export const AdminProfile = () => {
         return <h1>no user found</h1>;
       } else {
         return (
-          <div className="mt-5">
+          <div className='div-tables'>
             {load && <div>Loading..</div>}
             {error && <p>Error: {error}</p>}
-            <table className="table table-striped">
-              <thead>
+            <table className="main-table" style={{gap: '1em'}}>
+              <thead className='thread-table'>
                 <tr>
                   <th>ID</th>
                   <th>UserName</th>
