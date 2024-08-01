@@ -12,6 +12,7 @@ import UserDeleteReview from "./Components/UserDeleteReview";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Components/Layout";
 import { SearchMovie } from "./pages/SearchMovie/SearchMovie";
+import MovieProfile from "./pages/SearchMovie/MovieProfile/MovieProfile";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/search-movie" element={<SearchMovie />} />
+          <Route path="/movie/:id" element={<MovieProfile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />}></Route>
           <Route path="/user-profile" element={<UserProfile />} />

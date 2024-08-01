@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './movieItems.css';
 
 const MovieItem = ({ movie }) => {
     const genreNames = movie.moviesGenre
