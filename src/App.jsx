@@ -8,6 +8,8 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Components/Layout";
 import { SearchMovie } from "./pages/SearchMovie/SearchMovie";
 import MovieProfile from "./pages/SearchMovie/MovieProfile/MovieProfile";
+import { AdminProfile } from "./pages/AdminProfile/AdminProfile";
+import { EditUser } from "./pages/AdminProfile/EditUser/EditUser";
 
 function App() {
   return (
