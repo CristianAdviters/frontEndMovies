@@ -16,6 +16,7 @@ const StaticMovies = () => {
       <div className="cards-container">
         <div className="card">
           <img
+            className="img-staticMovies"
             src="https://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg"
             alt=""
           />
@@ -23,6 +24,7 @@ const StaticMovies = () => {
 
         <div className="card">
           <img
+            className="img-staticMovies"
             src="https://upload.wikimedia.org/wikipedia/en/7/70/Terminator1984movieposter.jpg"
             alt=""
           />

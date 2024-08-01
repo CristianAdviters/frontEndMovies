@@ -6,7 +6,12 @@ const Footer = () => {
   return (
     <footer>
       <div>Movies Final Project</div>
-      <div>Bootcamp Adviter</div>
+      <div>
+        {" "}
+        <a href="https://adviters.com/" target="_blank">
+          Bootcamp Adviter
+        </a>
+      </div>
       <div>Sheila - Cristian</div>
     </footer>
   );
