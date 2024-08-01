@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 import EditButton from "./Components/EditButton";
 import UserProfile from "./Components/UserProfile";
 import UserEditReview from "./Components/UserEditReview";
+import UserDeleteReview from "./Components/UserDeleteReview";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./Components/Layout";
 
@@ -19,8 +20,12 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />}></Route>
-          <Route path="/user-edit-review" element={<UserEditReview />} />
           <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/user-edit-review" element={<UserEditReview />} />
+          <Route
+            path="/user-delete-review"
+            element={<UserDeleteReview />}
+          ></Route>
         </Route>
       </Routes>
     </>

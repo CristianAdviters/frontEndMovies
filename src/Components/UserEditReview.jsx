@@ -25,9 +25,6 @@ const UserEditReview = () => {
           }}
         />
       </form>
-
-      {/* HOME BUTTON */}
-      <button onClick={() => navigate("/home")}>Home </button>
     </>
   );
 };

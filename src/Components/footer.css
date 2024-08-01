@@ -1,12 +1,20 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
 footer {
-  /* border: 1px black solid; */
+  margin: auto;
   margin-top: 15px;
   font-family: cursive;
   background-color: blue;
   color: whitesmoke;
   height: 50px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  bottom: 0;
 }
