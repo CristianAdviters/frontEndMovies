@@ -6,7 +6,6 @@ const UserProfile = () => {
   return (
     <>
       <EditButton />
-      <DeleteButton />
     </>
   );
 };

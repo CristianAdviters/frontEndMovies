@@ -1,18 +1,27 @@
-import React from 'react';
+
+
 import { Link, useParams } from 'react-router-dom';
-import { useFetch } from '../../../hooks/useFetch';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { useFetch } from "../../../hooks/useFetch";
+import UserEditReview from "../../../Components/UserEditReview";
+
 
 const MovieProfile = () => {
   const { id } = useParams();
-  
-  const {data: movie, load, error} = useFetch(`http://localhost:3002/movies/${id}`)
+
+  const {
+    data: movie,
+    load,
+    error,
+  } = useFetch(`http://localhost:3002/movies/${id}`);
 
   const genreNames = movie.moviesGenre
-    ? movie.moviesGenre.map(mg => mg.genre.name)
-    : []; 
+    ? movie.moviesGenre.map((mg) => mg.genre.name)
+    : [];
 
-  if(load) return <div>Loading...</div>
-  if(error) return <div>Error: {error}</div>
+  if (load) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
@@ -21,6 +30,7 @@ const MovieProfile = () => {
 
       <p>{movie.description}</p>
       <p>Release Date: {movie.release_date}</p>
+
       <p>Genres: {genreNames.length > 0 ? genreNames.join(', ') : 'No genres available'}</p>
       <img src={movie.image} alt={movie.title} style={{ width: '100px' }} />
       
@@ -52,6 +62,15 @@ const MovieProfile = () => {
        </div>
        )
       )}
+
+      <p>
+        Genres:{" "}
+        {genreNames.length > 0 ? genreNames.join(", ") : "No genres available"}
+      </p>
+      <img src={movie.image} alt={movie.title} style={{ width: "100px" }} />
+
+      <UserEditReview />
+
       <div>Look at you..profile movie page...</div>
     </div>
   );
